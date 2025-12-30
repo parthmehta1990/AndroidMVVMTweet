@@ -11,7 +11,7 @@ plugins {
 
 android {
     namespace = "com.example.tweets"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.tweets"
@@ -33,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -63,8 +63,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     //Hilt
-    implementation ("com.google.dagger:hilt-android:2.44")
-    kapt ("com.google.dagger:hilt-compiler:2.44")
+    implementation ("com.google.dagger:hilt-android:2.51.1")
+    kapt ("com.google.dagger:hilt-compiler:2.51.1")
 
     var lifecycle_version = "2.6.1"
     //viewmodel
@@ -83,6 +83,6 @@ dependencies {
 
     //Navigation
     implementation ("androidx.navigation:navigation-compose:2.6.0")
-    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.3.0")
 
 }
